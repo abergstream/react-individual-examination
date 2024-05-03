@@ -1,0 +1,15 @@
+.repo-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+.repo__date {
+  width: 130px;
+}
+.repo__name {
+  flex: 1;
+  & > a {
+    color: #000;
+  }
+}
