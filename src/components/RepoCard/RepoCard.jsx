@@ -35,57 +35,61 @@ const RepoCard = ({ repo }) => {
     totalCharacters += languages[key];
   }
   return (
-    <div className="repo-card">
-      <h3 className="repo-card__header">{repo.name}</h3>
-
-      <div className="repo-card__flex repo-card__flex--60">
-        <div className="repo-info-container">
-          <h3 className="repo-info__heading">{commits}</h3>
-          Commits
-        </div>
-        <div className="repo-info-container">
-          <h3 className="repo-info__heading">{contributors}</h3>
-          Contributors
-        </div>
+    <section className="repo-wrapper">
+      <div className="repo-card__header-container">
+        <h3 className="repo-card__header">{repo.name}</h3>
+        <img className="repo-card__logo" src="./github-mark-white.png" />
       </div>
-      <section className="repo__languages-wrapper">
-        <div className="repo__languages-container repo__language-container--list">
-          {languages &&
-            Object.entries(languages).map(([language, count]) => (
-              <div
-                key={language}
-                className={`repo__language-list repo__language-list--${language.toLowerCase()}`}
-              >
-                <strong>{language}</strong>:{" "}
-                {parseFloat((count / totalCharacters) * 100).toFixed(1)}%
-              </div>
-            ))}
+      <div className="repo-card">
+        <div className="repo-card__flex repo-card__flex--60">
+          <div className="repo-info-container">
+            <h3 className="repo-info__heading">{commits}</h3>
+            Commits
+          </div>
+          <div className="repo-info-container">
+            <h3 className="repo-info__heading">{contributors}</h3>
+            Contributors
+          </div>
         </div>
+        <section className="repo__languages-wrapper">
+          <div className="repo__languages-container repo__language-container--list">
+            {languages &&
+              Object.entries(languages).map(([language, count]) => (
+                <div
+                  key={language}
+                  className={`repo__language-list repo__language-list--${language.toLowerCase()}`}
+                >
+                  <strong>{language}</strong>:{" "}
+                  {parseFloat((count / totalCharacters) * 100).toFixed(1)}%
+                </div>
+              ))}
+          </div>
 
-        <div className="repo__languages-container">
-          {languages &&
-            Object.entries(languages).map(([language, count]) => (
-              <div
-                key={language}
-                className={`repo__language repo__language--${language.toLowerCase()}`}
-                style={{
-                  "--i":
-                    parseFloat((count / totalCharacters) * 100).toFixed(1) +
-                    "%",
-                }}
-              ></div>
-            ))}
-        </div>
-      </section>
-      <section className="repo-card__flex">
-        <div className="repo-card__date">
-          Updated: {formatDate(repo.updated_at)}
-        </div>
-        <div className="repo-card__date">
-          Created: {formatDate(repo.created_at)}
-        </div>
-      </section>
-    </div>
+          <div className="repo__languages-container">
+            {languages &&
+              Object.entries(languages).map(([language, count]) => (
+                <div
+                  key={language}
+                  className={`repo__language repo__language--${language.toLowerCase()}`}
+                  style={{
+                    "--i":
+                      parseFloat((count / totalCharacters) * 100).toFixed(1) +
+                      "%",
+                  }}
+                ></div>
+              ))}
+          </div>
+        </section>
+        <section className="repo-card__flex">
+          <div className="repo-card__date">
+            Updated: {formatDate(repo.updated_at)}
+          </div>
+          <div className="repo-card__date">
+            Created: {formatDate(repo.created_at)}
+          </div>
+        </section>
+      </div>
+    </section>
   );
 };
 const formatDate = (date) => {
