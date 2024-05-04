@@ -1,23 +1,42 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Nav.css";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+
 const Nav = () => {
   const navigate = useNavigate();
   return (
     <section className="nav-wrapper">
       <nav className="nav-container">
-        <aside></aside>
+        <aside>Bild</aside>
         <div className="nav__menu">
-          <a className="nav__item" onClick={() => navigate("/")}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav__item nav__item--active" : "nav__item  "
+            }
+            to="/"
+          >
             Home
-          </a>
-          <a className="nav__item" onClick={() => navigate("/projects")}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav__item nav__item--active" : "nav__item  "
+            }
+            to="/projects"
+          >
             Projects
-          </a>{" "}
-          <a className="nav__item" onClick={() => navigate("/projects")}>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "nav__item nav__item--active" : "nav__item  "
+            }
+            to="/about"
+          >
             About
-          </a>
+          </NavLink>
+          <aside className="nav__item toggle-container">
+            <ToggleSwitch />
+          </aside>
         </div>
-        <aside></aside>
       </nav>
     </section>
   );

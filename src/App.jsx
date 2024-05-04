@@ -1,16 +1,17 @@
 import "./App.css";
 import { Toaster } from "react-hot-toast";
-// import { useDispatch, useSelector } from "react-redux";
-// import { toggleTheme } from "./store";
 import Nav from "./components/Nav/Nav";
-import { Outlet } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Projects from "./pages/Projects";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   // const notify = () => toast.success("Here is your toast.");
-  // const test = useSelector((state) => state.theme.mode);
-  // const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.mode);
   return (
-    <>
+    <BrowserRouter>
       <Toaster
         toastOptions={{
           className: "",
@@ -22,12 +23,15 @@ function App() {
           },
         }}
       />
-      <Nav />
-
+      <Nav />{" "}
       <section className="main__wrapper">
-        <Outlet />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path={"/projects"} element={<Projects />} />
+          <Route path={"/about"} element={<About />} />
+        </Routes>{" "}
       </section>
-    </>
+    </BrowserRouter>
   );
 }
 

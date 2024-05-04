@@ -1,6 +1,6 @@
 .nav-wrapper {
-  background-color: #333;
-  color: #dadada;
+  background-color: var(--nav-background-color);
+  color: var(--nav-text-color);
   font-size: 1.2rem;
   font-family: Inter;
   display: flex;
@@ -10,21 +10,30 @@
   width: min(1024px, 100%);
   display: flex;
   justify-content: space-between;
-}
-aside {
-  width: 100px;
+  padding: 0 1rem;
 }
 .nav__menu {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav__item {
   padding: 2rem 2rem;
   cursor: pointer;
-
+  color: var(--nav-text-color);
+  text-decoration: none;
   &:hover {
-    background-color: #222;
+    text-decoration: underline;
   }
+}
+.nav__item--active {
+  background-color: var(--nav-active-bg);
+}
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
 }

@@ -1,0 +1,28 @@
+.toggle__label {
+  display: block;
+  width: 35px;
+  height: 20px;
+  background-color: var(--theme-toggle-bg);
+  position: relative;
+  border-radius: 0.4rem;
+  transition: 250ms;
+}
+
+.toggle__label::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 0.4rem;
+  background-color: white;
+  transition: 250ms;
+}
+#toggleTheme {
+  display: none;
+}
+#toggleTheme:checked ~ .toggle__label::before {
+  left: 17px;
+}

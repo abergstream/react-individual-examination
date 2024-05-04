@@ -1,8 +1,18 @@
 .repo-container {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  font-size: 1.4rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--repo-hover-bg);
+  }
+}
+.repo-container--header:hover {
+  background-color: var(--primary-background-color);
+}
+.repo__header:hover {
+  font-weight: 600;
 }
 .repo__date {
   width: 130px;
@@ -10,6 +20,13 @@
 .repo__name {
   flex: 1;
   & > a {
-    color: #000;
+    color: var(--primary-text-color);
   }
+}
+.loader-container {
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
