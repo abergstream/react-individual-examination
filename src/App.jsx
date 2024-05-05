@@ -6,9 +6,12 @@ import { useSelector } from "react-redux";
 import Projects from "./pages/Projects/Projects";
 import Home from "./pages/Home/Home";
 import About from "./pages/About";
+import { useState } from "react";
 
 function App() {
   // const notify = () => toast.success("Here is your toast.");
+  const [repos, setRepos] = useState(null);
+
   const theme = useSelector((state) => state.theme.mode);
   return (
     <BrowserRouter>
@@ -28,7 +31,10 @@ function App() {
         <section className="main__wrapper">
           <Routes>
             <Route index element={<Home />} />
-            <Route path={"/projects"} element={<Projects />} />
+            <Route
+              path={"/projects"}
+              element={<Projects repos={repos} setRepos={setRepos} />}
+            />
             <Route path={"/about"} element={<About />} />
           </Routes>{" "}
         </section>

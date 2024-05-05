@@ -6,6 +6,7 @@
   position: relative;
   border-radius: 0.4rem;
   transition: 250ms;
+  cursor: pointer;
 }
 
 .toggle__label::before {

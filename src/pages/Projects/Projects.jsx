@@ -5,22 +5,20 @@ import RotatingCircle from "../../components/RotatingCircle/RotatingCircle";
 import RepoCard from "../../components/RepoCard/RepoCard";
 import "./Projects.css";
 import Button from "../../components/Button/Button";
-const Projects = () => {
-  const [repos, setRepos] = useState(null);
-
+const Projects = ({ repos, setRepos }) => {
   return (
     <>
-      <FetchRepos setRepos={setRepos} repos={repos} />
+      {/* <FetchRepos setRepos={setRepos} repos={repos} /> */}
       <section>
-        <h2 className="projects__header">Hey there!</h2>
+        <h2 className="projects__header">My Projects!</h2>
         <div>
           <p className="projects__text">
             Here's three of my projects that have been recently updated on
             GitHub.
           </p>
-          <p className="projects__text">
-            They're the result of some of my recent work and passion projects.
-          </p>
+          {/* <p className="projects__text">
+              They're the result of some of my recent work and passion projects.
+            </p> */}
           <p className="projects__text">
             If you're interested in exploring them further or checking out more
             of what I've been up to,

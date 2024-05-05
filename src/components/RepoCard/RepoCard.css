@@ -10,7 +10,7 @@
 .repo-card__header-link {
   font-size: 1.6rem;
   text-decoration: none;
-  color: rgb(201, 201, 201);
+  color: var(--header-link-color);
   &:hover {
     text-decoration: underline;
   }

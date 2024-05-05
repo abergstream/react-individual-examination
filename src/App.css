@@ -41,10 +41,10 @@ body {
   --box-shadow-color: rgba(99, 99, 99, 0.2);
 
   --repo-card-header: #222;
-
-  --primary-button-bg: #e0dfde;
+  --header-link-color: #fff;
+  --primary-button-bg: transparent;
   --primary-button-bg-hover: #d6d5d4;
-  --primary-button-text: #5b5b59;
+  --primary-button-text: #333;
 }
 .theme-dark {
   --nav-text-color: #dadada;
@@ -60,7 +60,7 @@ body {
   --box-shadow-color: #000;
 
   --repo-card-header: #000;
-
+  --header-link-color: rgb(201, 201, 201);
   --primary-button-bg: #212121;
   --primary-button-bg-hover: #111;
   --primary-button-text: #ccc;
