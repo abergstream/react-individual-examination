@@ -1,0 +1,21 @@
+.container {
+  --stroke-size: var(--circle-border-size);
+  --diff: calc(calc(var(--circle-diameter) / 2) - var(--stroke-size));
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  background-image: conic-gradient(transparent 35%, var(--circle-color));
+
+  mask: radial-gradient(circle var(--diff), transparent 98%, #fff 100%);
+  -webkit-mask: radial-gradient(circle var(--diff), transparent 98%, #fff 100%);
+
+  border-radius: 50%;
+  animation: rotate-circle var(--rotating-circle-speed) linear infinite;
+}
+@keyframes rotate-circle {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

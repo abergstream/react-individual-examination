@@ -1,10 +1,24 @@
 .nav-wrapper {
   background-color: var(--nav-background-color);
+  width: min(1024px, 100%);
   color: var(--nav-text-color);
   font-size: 1.2rem;
   font-family: Inter;
   display: flex;
   justify-content: center;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  font-family: "Lobster", sans-serif;
+  font-size: 2.4rem;
+}
+.nav__logo--link {
+  color: #69c4cf;
+  text-decoration: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 .nav-container {
   width: min(1024px, 100%);
@@ -17,19 +31,25 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
 }
 
 .nav__item {
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   color: var(--nav-text-color);
   text-decoration: none;
+  border-radius: 0.4rem;
+  transition: 300ms;
   &:hover {
-    text-decoration: underline;
+    background-color: var(--nav-hover-bg);
+    color: #333;
   }
 }
 .nav__item--active {
   background-color: var(--nav-active-bg);
+  border: 1px solid var(--nav-text-color);
 }
 .toggle-container {
   display: flex;

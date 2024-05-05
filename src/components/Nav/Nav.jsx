@@ -7,7 +7,11 @@ const Nav = () => {
   return (
     <section className="nav-wrapper">
       <nav className="nav-container">
-        <aside>Bild</aside>
+        <aside className="nav__logo">
+          <NavLink className={() => "nav__logo--link"} to="/">
+            andreasb
+          </NavLink>
+        </aside>
         <div className="nav__menu">
           <NavLink
             className={({ isActive }) =>
@@ -33,7 +37,7 @@ const Nav = () => {
           >
             About
           </NavLink>
-          <aside className="nav__item toggle-container">
+          <aside className="toggle-container">
             <ToggleSwitch />
           </aside>
         </div>

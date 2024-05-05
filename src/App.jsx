@@ -23,13 +23,15 @@ function App() {
           },
         }}
       />
-      <Nav />{" "}
-      <section className="main__wrapper">
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path={"/projects"} element={<Projects />} />
-          <Route path={"/about"} element={<About />} />
-        </Routes>{" "}
+      <section className="wrapper">
+        <Nav />
+        <section className="main__wrapper">
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path={"/projects"} element={<Projects />} />
+            <Route path={"/about"} element={<About />} />
+          </Routes>{" "}
+        </section>
       </section>
     </BrowserRouter>
   );

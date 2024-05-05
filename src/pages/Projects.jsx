@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../components/FetchRepos/FetchRepos.css";
 import FetchRepos from "../components/FetchRepos/FetchRepos";
-import CircleDots from "../components/CircleDots/CircleDots";
+import RotatingCircle from "../components/RotatingCircle/RotatingCircle";
 import RepoCard from "../components/RepoCard/RepoCard";
 
 const Projects = () => {
@@ -17,12 +17,16 @@ const Projects = () => {
             {repos.map((repo) => {
               return <RepoCard key={repo.id} repo={repo} />;
             })}
-            {/* <RepoCard repo={repos[4]} /> */}
           </div>
         </>
       ) : (
         <div className="loader-container">
-          <CircleDots />
+          <RotatingCircle
+            circleColor={"var(--primary-text-color"}
+            circleDiameter={100}
+            circleBorderSize={15}
+            circleSpeed={1}
+          />
         </div>
       )}
     </>

@@ -1,19 +1,28 @@
 .repo-cards-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 500px) {
+    justify-content: center;
+    gap: 3rem;
+  }
 }
 .repo-wrapper {
-  width: 310px;
+  width: min(310px, 100%);
   box-shadow: var(--box-shadow-color) 0px 2px 8px 0px;
   border-radius: 0.8rem;
 }
 .repo-card__header {
-  margin: 0.5rem 0;
-  font-size: 1.6rem;
-
-  color: #dadada;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin: 0;
+}
+.repo-card__header-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #dadada;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .repo-card__header-container {
   background-color: #000;

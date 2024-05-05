@@ -37,7 +37,15 @@ const RepoCard = ({ repo }) => {
   return (
     <section className="repo-wrapper">
       <div className="repo-card__header-container">
-        <h3 className="repo-card__header">{repo.name}</h3>
+        <h3 className="repo-card__header">
+          <a
+            className="repo-card__header-link"
+            href={repo.html_url}
+            target="_blank"
+          >
+            {repo.name}
+          </a>
+        </h3>
         <img className="repo-card__logo" src="./github-mark-white.png" />
       </div>
       <div className="repo-card">
