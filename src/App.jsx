@@ -3,8 +3,8 @@ import { Toaster } from "react-hot-toast";
 import Nav from "./components/Nav/Nav";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Projects from "./pages/Projects";
-import Home from "./pages/Home";
+import Projects from "./pages/Projects/Projects";
+import Home from "./pages/Home/Home";
 import About from "./pages/About";
 
 function App() {

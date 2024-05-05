@@ -42,8 +42,10 @@
   text-decoration: none;
   border-radius: 0.4rem;
   transition: 300ms;
+  border: 1px solid transparent;
   &:hover {
     background-color: var(--nav-hover-bg);
+    border-color: #9d9d9d;
     color: #333;
   }
 }
