@@ -1,14 +1,14 @@
-import { useState } from "react";
+import "./Projects.css";
 import "../../components/FetchRepos/FetchRepos.css";
 import FetchRepos from "../../components/FetchRepos/FetchRepos";
 import RotatingCircle from "../../components/RotatingCircle/RotatingCircle";
 import RepoCard from "../../components/RepoCard/RepoCard";
-import "./Projects.css";
+
 import Button from "../../components/Button/Button";
 const Projects = ({ repos, setRepos }) => {
   return (
     <>
-      {/* <FetchRepos setRepos={setRepos} repos={repos} /> */}
+      <FetchRepos setRepos={setRepos} repos={repos} />
       <section>
         <h2 className="projects__header">My Projects!</h2>
         <div>

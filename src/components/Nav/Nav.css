@@ -54,6 +54,7 @@
   border: 1px solid var(--nav-text-color);
 }
 .toggle-container {
+  padding: 0 0 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;

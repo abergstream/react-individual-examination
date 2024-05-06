@@ -5,6 +5,7 @@ const RepoCard = ({ repo }) => {
   const [commits, setCommits] = useState();
   const [languages, setLanguages] = useState();
   useEffect(() => {
+    // Fetch contributors via API
     const countContributors = async () => {
       const response = await fetch(
         `https://api.github.com/repos/abergstream/${repo.name}/contributors?page&per_page=100`
@@ -12,6 +13,7 @@ const RepoCard = ({ repo }) => {
       const data = await response.json();
       setContributors(data.length);
     };
+    // Fetch commits via API
     const countCommits = async () => {
       const response = await fetch(
         `https://api.github.com/repos/abergstream/${repo.name}/commits?page=1&per_page=100`
@@ -19,6 +21,7 @@ const RepoCard = ({ repo }) => {
       const data = await response.json();
       setCommits(data.length);
     };
+    // Fetch the programming languages
     const getLanguages = async () => {
       const response = await fetch(
         `https://api.github.com/repos/abergstream/${repo.name}/languages`
@@ -26,10 +29,13 @@ const RepoCard = ({ repo }) => {
       const data = await response.json();
       setLanguages(data);
     };
+    // Run the fetch-functions
     countContributors();
     countCommits();
     getLanguages();
   }, []);
+
+  // Get the total amount of characters
   let totalCharacters = 0;
   for (let key in languages) {
     totalCharacters += languages[key];
@@ -61,6 +67,7 @@ const RepoCard = ({ repo }) => {
         </div>
         <section className="repo__languages-wrapper">
           <div className="repo__languages-container repo__language-container--list">
+            {/* Prints out the languages and what percentage it is of the project */}
             {languages &&
               Object.entries(languages).map(([language, count]) => (
                 <div
@@ -74,6 +81,7 @@ const RepoCard = ({ repo }) => {
           </div>
 
           <div className="repo__languages-container">
+            {/* Displays a colored box with the language/percentage */}
             {languages &&
               Object.entries(languages).map(([language, count]) => (
                 <div
@@ -101,6 +109,9 @@ const RepoCard = ({ repo }) => {
   );
 };
 const formatDate = (date) => {
+  {
+    /* Formats date to first 10 characters */
+  }
   const newDate = date.substring(0, 10);
   return newDate;
 };

@@ -5,7 +5,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Projects from "./pages/Projects/Projects";
 import Home from "./pages/Home/Home";
-import About from "./pages/About";
+import About from "./pages/About/About";
 import { useState } from "react";
 
 function App() {

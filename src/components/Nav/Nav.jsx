@@ -1,9 +1,8 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 const Nav = () => {
-  const navigate = useNavigate();
   return (
     <section className="nav-wrapper">
       <nav className="nav-container">
