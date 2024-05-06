@@ -32,9 +32,9 @@ const Nav = () => {
             className={({ isActive }) =>
               isActive ? "nav__item nav__item--active" : "nav__item  "
             }
-            to="/about"
+            to="/contact"
           >
-            About
+            Contact
           </NavLink>
           <aside className="toggle-container">
             <ToggleSwitch />

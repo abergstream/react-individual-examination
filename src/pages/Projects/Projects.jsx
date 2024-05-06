@@ -8,22 +8,19 @@ import Button from "../../components/Button/Button";
 const Projects = ({ repos, setRepos }) => {
   return (
     <>
-      <FetchRepos setRepos={setRepos} repos={repos} />
+      {/* <FetchRepos setRepos={setRepos} repos={repos} /> */}
       <section>
-        <h2 className="projects__header">My Projects!</h2>
+        <h2 className="page__header">My Projects!</h2>
         <div>
-          <p className="projects__text">
+          <p className="page__text">
             Here's three of my projects that have been recently updated on
             GitHub.
           </p>
-          {/* <p className="projects__text">
-              They're the result of some of my recent work and passion projects.
-            </p> */}
-          <p className="projects__text">
+          <p className="page__text">
             If you're interested in exploring them further or checking out more
             of what I've been up to,
           </p>
-          <p className="projects__text">
+          <p className="page__text">
             feel free to visit my{" "}
             <Button
               text={"GitHub page"}
@@ -42,6 +39,7 @@ const Projects = ({ repos, setRepos }) => {
         </>
       ) : (
         <div className="loader-container">
+          {/* Show loader (from my github-repo) if api isn't loaded */}
           <RotatingCircle
             circleColor={"var(--primary-text-color"}
             circleDiameter={80}

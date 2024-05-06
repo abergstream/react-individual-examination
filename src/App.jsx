@@ -5,8 +5,8 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Projects from "./pages/Projects/Projects";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
 import { useState } from "react";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   // const notify = () => toast.success("Here is your toast.");
@@ -35,7 +35,7 @@ function App() {
               path={"/projects"}
               element={<Projects repos={repos} setRepos={setRepos} />}
             />
-            <Route path={"/about"} element={<About />} />
+            <Route path={"/contact"} element={<Contact />} />
           </Routes>{" "}
         </section>
       </section>

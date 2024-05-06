@@ -1,0 +1,11 @@
+.home-container {
+  background: url("../andreas.png");
+  background-size: 265px 350px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding: 1rem 27rem 1rem 1rem;
+  min-height: 350px;
+  @media screen and (max-width: 500px) {
+    padding: 1rem 1rem 35rem;
+  }
+}
