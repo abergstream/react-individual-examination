@@ -84,6 +84,7 @@
   background-color: transparent;
   border-radius: 0.4rem;
   transition: 300ms;
+  color: var(--primary-text-color);
   &:hover {
     border-color: var(--input-focus-color);
   }
