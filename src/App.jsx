@@ -9,7 +9,6 @@ import { useState } from "react";
 import Contact from "./pages/Contact/Contact";
 
 function App() {
-  // const notify = () => toast.success("Here is your toast.");
   const [repos, setRepos] = useState(null);
 
   const theme = useSelector((state) => state.theme.mode);
