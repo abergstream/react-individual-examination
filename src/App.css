@@ -19,14 +19,14 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  gap: 8rem;
+  gap: 6rem;
   align-items: center;
 }
 .main__wrapper {
   width: min(1024px, 100%);
   min-height: 300px;
   padding: 1rem;
+  margin: 0 0 2rem;
 }
 .page__header {
   font-family: Inter;
