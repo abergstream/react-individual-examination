@@ -61,6 +61,10 @@ body {
   --primary-button-bg-hover: #d6d5d4;
   --primary-button-text: #333;
   --button-box-shadow-color: #111;
+
+  --primary-icon-color: #555;
+
+  --input-focus-color: #333;
 }
 .theme-dark {
   --nav-text-color: #dadada;
@@ -81,4 +85,7 @@ body {
   --primary-button-bg-hover: #111;
   --primary-button-text: #ccc;
   --button-box-shadow-color: #ccc;
+
+  --primary-icon-color: #a6a6a6;
+  --input-focus-color: #efefef;
 }
