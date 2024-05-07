@@ -6,7 +6,7 @@ My project is a single-page application (SPA) designed to showcase my portfolio 
 ![image](https://github.com/abergstream/react-individual-examination/assets/64410668/16786a26-5117-4db8-9a6c-20bf8cff9f95)
 
 
-## Printscreens showing light and dark-mode combined
+## Bigger printscreens showing ~half light- and ~half dark-mode combined
 
 ![image](https://github.com/abergstream/react-individual-examination/assets/64410668/4e188d23-718d-410f-a76f-74990b1a38b2)
 
