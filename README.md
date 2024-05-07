@@ -2,6 +2,10 @@
 
 My project is a single-page application (SPA) designed to showcase my portfolio and enable users to contact me easily. It incorporates various features to enhance user experience, including toast notifications powered by `react-hot-toast` and icons from `material-design-icons`.
 
+## Small printscreens to show design
+![image](https://github.com/abergstream/react-individual-examination/assets/64410668/16786a26-5117-4db8-9a6c-20bf8cff9f95)
+
+
 ## Printscreens showing light and dark-mode combined
 
 ![image](https://github.com/abergstream/react-individual-examination/assets/64410668/4e188d23-718d-410f-a76f-74990b1a38b2)
